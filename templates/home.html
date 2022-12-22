@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Prediction</title>
+</head>
+
+<body style="background-color: rgb(189, 226, 228);">
+    <center>
+        <h1> Laptop Price Prediction </h1>
+        <form method="get" action="/predict">
+            <!-- Headings for the form -->
+            <div class="headingsContainer">
+                <h3 style="color:rgb(197, 70, 165);">Buy Your Favourite Laptop </h3>
+            </div>
+    
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                <label for="Company" style="color:Tomato;">Company</label><br>
+                <select placeholder="Enter Brand" name="Company" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "Acer">Acer</option>
+                    <option value = "Apple">Apple</option>
+                    <option value = "Asus">Asus</option>
+                    <option value = "Chuwi">Chuwi</option>
+                    <option value = "Dell">Dell</option>
+                    <option value = "Fujitsu">Fujitsu</option>
+                    <option value = "Google">Google</option>
+                    <option value = "HP">HP</option>
+                    <option value = "Huawei">Huawei</option>
+                    <option value = "LG">LG</option>
+                    <option value = "Lenovo">Lenovo</option>
+                    <option value = "MSI">MSI</option>
+                    <option value = "Mediacom">Mediacom</option>
+                    <option value = "Microsoft">Microsoft</option>
+                    <option value = "Razer">Razer</option>
+                    <option value = "Samsung">Samsung</option>
+                    <option value = "Toshiba">Toshiba</option>
+                    <option value = "Vero">Vero</option>
+                    <option value = "Xiaomi">Xiaomi</option>
+                </select>
+                <br><br>
+
+                <label for="TypeName" style="color:Tomato;">TypeName</label><br>
+                <select placeholder="TypeName" name="TypeName" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "2 in 1 Convertible">2 in 1 Convertible</option>
+                    <option value = "Gaming">Gaming</option>
+                    <option value = "Netbook">Netbook</option>
+                    <option value = "Notebook">Notebook</option>
+                    <option value = "Ultrabook">Ultrabook</option>
+                    <option value = "Workstation">Workstation</option>                
+                </select>
+                <br><br>
+
+                <label for="Ram" style="color:Tomato;">Ram</label><br>
+                <select placeholder="Ram" name="Ram" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "2  ">2</option>
+                    <option value = "4">4</option>
+                    <option value = "6 ">6</option>
+                    <option value = "8">8</option>
+                    <option value = "12">12</option>
+                    <option value = "16 ">16</option>
+                    <option value = "24">24</option>
+                    <option value = "32">32</option>
+                    <option value = "64">64</option>                   
+                </select>
+                <br><br>
+
+                <label for="Weight" style="color:Tomato;">Weight</label><br>
+                <input type="number" step="0.01" min="0.5" max="5" placeholder="Enter value in range 0.5 to 5" style="width: 200px;" name="Weight" required>
+                <br><br>
+
+                <label for="Touchscreen" style="color:Tomato;">Touchscreen:</label>
+                <label style="color:rgb(132, 110, 185);">Yes:</label> <input type = "radio" name= "Touchscreen" value = "1">
+                <label style="color:rgb(132, 110, 185);">No:</label> <input type = "radio" name= "Touchscreen" value = "0">
+                <br><br>
+
+                <label for="IPS" style="color:Tomato;">IPS:</label>
+                <label style="color:rgb(132, 110, 185);">Yes:</label> <input type = "radio" name= "IPS" value = "1">
+                <label style="color:rgb(132, 110, 185);">No:</label> <input type = "radio" name= "IPS" value = "0">
+                <br><br>>
+
+                <label for="ppi" style="color:Tomato;">ppi</label><br>
+                <input type="number" step="0.01" min="80" max="400" placeholder="Enter value in range 80 to 400" style="width: 200px;" name="ppi" required>
+                <br><br>
+
+                <label for="Cpu_brand" style="color:Tomato;">Cpu_brand</label><br>
+                <select placeholder="Enter Cpu_brand" name="Cpu_brand" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "AMD_Processor">AMD_Processor</option>
+                    <option value = "Intel_Core_i3">Intel_Core_i3</option>
+                    <option value = "Intel_Core_i5">Intel_Core_i5</option>
+                    <option value = "Intel_Core_i7">Intel_Core_i7</option>
+                    <option value = "Other_Intel_Processor">Other_Intel_Processor</option>
+                </select>
+                <br><br>
+
+                <label for="HDD" style="color:Tomato;">HDD</label><br>
+                <select placeholder="Enter size of HDD" name="HDD" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "0">0</option>
+                    <option value = "32">32</option>
+                    <option value = "128">128</option>
+                    <option value = "500">500</option>
+                    <option value = "1000">1000</option>
+                    <option value = "2000">2000</option>
+                </select>
+                <br><br>
+
+                <label for="SSD" style="color:Tomato;">SSD</label><br>
+                <select placeholder="Enter size of SSD" name="SSD style="width: 180px;" required>
+                    <option></option>
+                    <option value = "0">0</option>
+                    <option value = "8">8</option>
+                    <option value = "16">16</option>
+                    <option value = "32">32</option>
+                    <option value = "64">64</option>
+                    <option value = "128">128</option>
+                    <option value = "180">180</option>
+                    <option value = "240">240</option>
+                    <option value = "256">256</option>
+                    <option value = "512">512</option>
+                    <option value = "768">768</option>
+                    <option value = "1000">1000</option>
+                    <option value = "1024">1024</option>
+                </select>
+                <br><br>
+
+                <label for="Gpu_brand" style="color:Tomato;">Gpu_brand</label><br>
+                <select placeholder="Enter Gpu_brand" name="Gpu_brand" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "AMD">AMD</option>
+                    <option value = "Intel">Intel</option>
+                    <option value = "Nvidia">Nvidia</option>
+                </select>
+                <br><br>
+
+                <label for="os" style="color:Tomato;">os</label><br>
+                <select placeholder="Enter os" name="os" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "Mac">Mac</option>
+                    <option value = "Windows">Windows</option>
+                    <option value = "Others/No OS/Linux">Others/No OS/Linux</option>
+                </select>
+                <br><br>
+
+              
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+                <br><br>
+                <h3 style="color:orange;">Laptop Price is <b style="color: black;"> {{ prediction }} /- Rs.</b> Only </h3>
+            </div>
+        </form>
+    </center>
+    
+
+
+</body>
+</html>
